@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instituto Técnico Francisco Miranda</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #2a3e51;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 80px;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        /* Contenedor principal */
+        .container {
+            display: flex;
+            padding: 40px 60px;
+        }
+
+        .main-content {
+            flex: 3;
+            padding-right: 40px;
+        }
+
+        .main-content h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Imágenes dentro del artículo */
+        .news-image {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Redes sociales flotantes */
+        .social-bar {
+            position: fixed;
+            top: 40%;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .social-bar a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background-color: #000;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px 0 0 5px;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <img src="img/Diseño sin título.jpg" alt="Logo Instituto Técnico Francisco Miranda" />
+            <nav>
+                <a href="inicio.html">REGRESAR A INICIO</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <div class="main-content">
+            <h1>Jóvenes de último de bachillerato del Instituto Técnico Francisco Miranda realizan su desempeño académico y de
+                conocimientos en la Casa Morazánica.</h1>
+
+            <p>Los alumnos del Instituto Técnico Francisco Miranda demostraron una vez más su compromiso con la
+                excelencia educativa al participar activamente en una jornada académica desarrollada en las
+                instalaciones de la Casa Morazánica, ubicada en el centro histórico de Tegucigalpa.</p>
+
+            <!-- Imagen 1 -->
+            <img src="img/catedra.jpg" alt="Estudiantes en la Casa Morazánica" class="news-image" />
+
+            <p>Durante esta visita, los estudiantes tuvieron la oportunidad de fortalecer sus conocimientos en áreas
+                como historia nacional, civismo y patrimonio cultural, al tiempo que pusieron en práctica habilidades
+                adquiridas en el aula. La experiencia no solo contribuyó a su desarrollo académico, sino que también
+                fomentó en ellos un mayor sentido de identidad y pertenencia nacional.</p>
+
+            <!-- Imagen 2 -->
+            <img src="img/catedra4.jpg" alt="Recorrido cultural" class="news-image" />
+
+            <p>Los docentes acompañantes destacaron el buen comportamiento, la disciplina y el entusiasmo de los
+                jóvenes, quienes participaron en actividades educativas, exposiciones interactivas y recorridos guiados
+                por el histórico recinto.</p>
+
+            <!-- Imagen 3 -->
+            <img src="img/catedra3.jpg" alt="Grupo de estudiantes en actividad" class="news-image" />
+
+            <p>Esta iniciativa forma parte del compromiso del Instituto Técnico Francisco Miranda de brindar una
+                educación integral que combine la formación técnica con el conocimiento humanístico, promoviendo la
+                reflexión crítica y el respeto por los valores patrios.</p>
+        </div>
+    </div>
+
+    <!-- Redes sociales flotantes -->
+    <div class="social-bar">
+        <a href="https://www.facebook.com/InstitutoTecnicoFranciscoMiranda" title="Facebook">f</a>
+        <a href="https://twitter.com/InstitutoFranciscoMiranda" title="X">X</a>
+        <a href="https://www.instagram.com/InstitutoFranciscoMiranda" title="Instagram">📷</a>
+        <a href="https://www.youtube.com/InstitutoFranciscoMiranda" title="YouTube">▶</a>
+        <a href="https://www.tiktok.com/@InstitutoFranciscoMiranda" title="TikTok">🎵</a>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        © 2025 Instituto Técnico Francisco Miranda – identidad y formación técnica.
+    </footer>
+
+</body>
+
+</html>

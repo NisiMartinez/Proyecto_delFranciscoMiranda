@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instituto Técnico Francisco Miranda</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+
+    /* Encabezado */
+    header {
+      background-color: #2a3e51;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 80px;
+      margin-right: 20px;
+      border-radius: 50%;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    /* Contenedor principal */
+    .container {
+      display: flex;
+      padding: 40px 60px;
+    }
+
+    .main-content {
+      flex: 3;
+      padding-right: 40px;
+    }
+
+    .main-content h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .main-content p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    /* Barra lateral */
+    .sidebar {
+      flex: 1;
+      border-left: 1px solid #ddd;
+      padding-left: 30px;
+    }
+
+    .sidebar h3 {
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .recent-post {
+      display: flex;
+      margin-bottom: 15px;
+      gap: 10px;
+    }
+
+    .recent-post img {
+      width: 70px;
+      height: 45px;
+      object-fit: cover;
+    }
+
+    .recent-post a {
+      color: #0077cc;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    /* Redes sociales flotantes */
+    .social-bar {
+      position: fixed;
+      top: 40%;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .social-bar a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      background-color: #000;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px 0 0 5px;
+    }
+     footer {
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-top: 40px;
+        }
+  </style>
+</head>
+
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">
+      <!-- Reemplaza este logo con el real si lo tienes -->
+      <img src="img/Diseño sin título.jpg" alt="" />
+      <nav>
+        <a href="inicio.html">INICIO</a>
+        <a href="instalaciones.html">INSTALACIONES</a>
+        <a href="personal.html">PERSONAL</a>
+        <a href="cursos.html">CURSOS</a>
+        <a href="talleres.html">TALLERES</a>
+        <a href="clases.html">CLASES</a>
+        <a href="banda.html">BANDA MUSICAL</a>
+        <a href="ubicacion.html">UBICACIÓN</a>
+        <a href="inscripcion.html">INSCRIPCIÓN</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <div class="container">
+    <!-- Artículo -->
+    <div class="main-content">
+      <h1>Con excelencia técnica, el Instituto Técnico Francisco Miranda formando jóvenes para el futuro de Honduras.
+      </h1>
+    <p>El Instituto Técnico Francisco Miranda es una institución educativa comprometida con la formación técnica de
+        excelencia, ubicada en la comunidad de Zambrano, en el departamento de Francisco Morazán. Desde su fundación, ha
+        sido un referente en la educación media técnica del país, preparando a jóvenes con sólidas bases académicas,
+        éticas y profesionales.
+      </p>
+      <p>Desde su fundación, el instituto ha formado a miles de jóvenes en áreas como electrónica, mecánica, informática
+        y administración. Su enfoque educativo no solo se centra en lo académico, sino también en valores y disciplina,
+        preparando a los alumnos para los retos del mundo laboral.</p>
+
+      <p>En su aniversario, docentes, estudiantes y egresados celebran el impacto que el Instituto Francisco Miranda ha
+        tenido en la sociedad hondureña, reafirmando su compromiso con la excelencia educativa técnica.</p>
+     
+        Con más de 40 años de trayectoria, el instituto se enfoca en brindar oportunidades de aprendizaje práctico y
+        teórico a estudiantes que desean incorporarse al mundo laboral con competencias técnicas de alto nivel o
+        continuar su formación universitaria.</p>
+    </div>
+
+    <!-- Entradas recientes -->
+    <aside class="sidebar">
+      <h3>Entradas Recientes</h3>
+      <div class="recent-post">
+        <img src="img/catedra.jpg" alt="" />
+        <a href="catedra.html">jovenes de ultimo de bachillerato participan en cátedra Morazánica</a>
+      </div>
+      <div class="recent-post">
+        <img src="img/agro,universidad.jpg" alt="" />
+        <a href="agro.html">jovenes de agroindustria hacen su pasantia en areas agricolas</a>
+      </div>
+      <div class="recent-post">
+        <img src="img/futbolMujeres.jpg" alt="" />
+        <a href="futbol.html">chicas de nuestro instituto participan en torneo de fútbol contra otros colegios</a>
+      </div>
+      <div class="recent-post">
+        <img src="img/robotica.jpg" alt="" />
+        <a href="robotica.html">Nuevos conocimientos en robótica para los estudiantes del Francisco Miranda</a>
+      </div>
+      <div class="recent-post">
+        <img src="img/bandacompe.jpg" alt="" />
+        <a href="bandacompe.html">La banda musical del instituto se destaca en competencia de la Championship 2025 del JTR</a>
+      </div>
+      
+    </aside>
+  </div>
+
+  <!-- Redes sociales flotantes -->
+  <div class="social-bar">
+    <a href="https://www.facebook.com/InstitutoTecnicoFranciscoMiranda" title="Facebook">f</a>
+    <a href="https://twitter.com/InstitutoFranciscoMiranda" title="X">X</a>
+    <a href="https://www.instagram.com/InstitutoFranciscoMiranda" title="Instagram">📷</a>
+    <a href="https://www.youtube.com/InstitutoFranciscoMiranda" title="YouTube">▶</a>
+    <a href="https://www.tiktok.com/@InstitutoFranciscoMiranda" title="TikTok">🎵</a>
+  </div>
+  <footer>
+        © 2025 Instituto Técnico Francisco Miranda – identidad y formación técnica.
+    </footer>
+
+</body>
+
+</html>
