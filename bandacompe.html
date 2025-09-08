@@ -38,13 +38,7 @@
         }
 
         .container {
-            display: flex;
             padding: 40px 60px;
-        }
-
-        .main-content {
-            flex: 3;
-            padding-right: 40px;
         }
 
         .main-content h1 {
@@ -60,13 +54,92 @@
         }
 
         .news-image {
-            width: 100%;
+            width: 50%;
+            /* tamaño más pequeño */
+            max-width: 500px;
+            /* no pasa de 500px */
             height: auto;
-            margin: 20px 0;
+            margin: 20px auto;
+            /* centrado */
+            display: block;
+            /* necesario para centrar */
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
+        /* Tarjetas de instrumentos */
+        .instrumentos {
+            margin-top: 50px;
+        }
+
+        .instrumentos h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+        }
+
+        /* Video */
+        .video-section {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .video-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .video-section iframe {
+            width: 80%;
+            height: 450px;
+            border-radius: 12px;
+        }
+
+        /* Requisitos */
+        .requisitos {
+            margin-top: 60px;
+            padding: 30px;
+            background: #eef2f7;
+            border-radius: 12px;
+        }
+
+        .requisitos h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .requisitos ul {
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* Barra lateral social */
         .social-bar {
             position: fixed;
             top: 40%;
@@ -108,56 +181,189 @@
         <div class="logo">
             <img src="img/Diseño sin título.jpg" alt="Logo Instituto Técnico Francisco Miranda" />
             <nav>
-                <a href="inicio.html">REGRESAR A INICIO</a>
+                <a href="inicio.html">INICIO</a>
+                <a href="instalaciones.html">INSTALACIONES</a>
+                <a href="personal.html">PERSONAL</a>
+                <a href="cursos.html">CURSOS</a>
+                <a href="talleres.html">TALLERES</a>
+                <a href="clases.html">CLASES</a>
+                <a href="banda.html">BANDA MUSICAL</a>
+                <a href="ubicacion.html">UBICACIÓN</a>
+                <a href="inscripcion.html">INSCRIPCIÓN</a>
             </nav>
         </div>
     </header>
 
     <!-- Contenido principal -->
-    <div class="container">
-        <div class="main-content">
-            <h1>La Banda Latina del Instituto Técnico Francisco Miranda se destaca en la Championship 2025 del JTR</h1>
+    <div class="container main-content">
+        <h1>La Banda Latina del Instituto Técnico Francisco Miranda se destaca en la Championship 2025 del JTR</h1>
+        <p>Con gran orgullo y pasión musical, la Banda Latina del Instituto Técnico Francisco Miranda participó en
+            la esperada competencia Championship 2025 organizada por el JTR (Juventud, Talento y Ritmo), dejando una
+            huella imborrable en el escenario nacional de bandas estudiantiles.</p>
 
-            <p>Con gran orgullo y pasión musical, la Banda Latina del Instituto Técnico Francisco Miranda participó en
-                la esperada competencia Championship 2025 organizada por el JTR (Juventud, Talento y Ritmo), dejando una
-                huella imborrable en el escenario nacional de bandas estudiantiles.</p>
+        <img src="img/JTR.jpg" alt="Banda Latina en presentación" class="news-image" />
 
-            <!-- Imagen 1 -->
-            <img src="img/bandacompe.jpg" alt="Banda Latina en presentación" class="news-image" />
+        <p>El evento, que reunió a agrupaciones de todo el país, tuvo lugar en Tegucigalpa y representó una
+            plataforma de alto nivel para que los estudiantes pudieran demostrar su talento, disciplina y compromiso
+            con la música. La Banda Latina sorprendió a jueces y espectadores con su energía, coordinación, trajes
+            vistosos y una impecable interpretación musical.</p>
 
-            <p>El evento, que reunió a agrupaciones de todo el país, tuvo lugar en Tegucigalpa y representó una
-                plataforma de alto nivel para que los estudiantes pudieran demostrar su talento, disciplina y compromiso
-                con la música. La Banda Latina de nuestro instituto sorprendió a jueces y espectadores con su energía,
-                coordinación, trajes vistosos y una impecable interpretación musical.</p>
+        <img src="img/bandacompe2.jpg" alt="Participación en el evento JTR" class="news-image" />
 
-            <p>El repertorio presentado incluyó una mezcla vibrante de ritmos latinos, marchas modernas y adaptaciones
-                originales que pusieron en alto el nombre del Instituto Técnico Francisco Miranda. Cada interpretación
-                fue cuidadosamente preparada durante semanas de ensayo, bajo la guía del instructor musical y con el
-                apoyo de la comunidad estudiantil.</p>
+        <p>Además del talento artístico, se destacó el espíritu de compañerismo y liderazgo entre los miembros de la
+            banda, quienes representaron los valores de respeto, esfuerzo y superación personal.</p>
 
-            <!-- Imagen 2 -->
-            <img src="img/bandacompe2.jpg" alt="Participación en el evento JTR" class="news-image" />
+        <img src="img/bandacompe3.jpg" alt="Celebración tras la presentación" class="news-image" />
 
-            <p>Además del talento artístico, se destacó el espíritu de compañerismo y liderazgo entre los miembros de la
-                banda, quienes no solo representaron a la institución, sino también a los valores de respeto, esfuerzo y
-                superación personal.</p>
+        <p>La participación en la Championship 2025 marca un hito importante en la historia cultural del instituto,
+            motivando a más estudiantes a unirse a la banda en el futuro.</p>
+    </div>
 
-            <p>“Nos sentimos muy orgullosos de este logro. La banda no solo tocó, sino que transmitió emociones al
-                público. Esto demuestra que la juventud de hoy tiene mucho que aportar a la cultura y al arte de nuestro
-                país”, comentó uno de los docentes organizadores.</p>
+    <!-- Sección instrumentos -->
+    <div class="container instrumentos">
+        <h2>🎺 Instrumentos de la Banda</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="img/trompeta.jpg" alt="Trompeta">
+                <h3>Trompeta</h3>
+                <p>En nuestra Banda latina "Francisco Miranda", la trompeta se destaca por darle ese toque brillante y
+                    enérgico a cada interpretación. Sus notas agudas y vibrantes son las que hacen que todos se prendan
+                    y sientan la pasión de nuestra música. Siempre lista para marcar los momentos más intensos, la
+                    trompeta es como el corazón que impulsa nuestro ritmo y alegría en cada presentación.</p>
+            </div>
+            <div class="card">
+                <img src="img/Trombon.jpg" alt="Trombón">
+                <h3>Trombón</h3>
+                <p>En nuestra Banda latina "Francisco Miranda", el trombón se destaca por aportar profundidad y fuerza
+                    a nuestro sonido. Con su tono cálido y potente, llena el espacio y acompaña a la trompeta creando
+                    esos momentos inolvidables que hacen vibrar a todos. Es el instrumento que le da cuerpo y carácter a
+                    nuestra música, haciendo que cada interpretación tenga ese sabor auténtico y lleno de energía.</p>
+            </div>
+            <div class="card">
+                <img src="img/Tuba.jpg" alt="Tuba">
+                <h3>Tuba</h3>
+                <p>En nuestra Banda latina "Francisco Miranda", la tuba grande se destaca por ser la base que sostiene
+                    todo nuestro ritmo. Sus sonidos graves y profundos son los que hacen que cada tema tenga fuerza y
+                    cuerpo, haciendo que todos sientan la música hasta en el corazón. Es el instrumento que marca el
+                    pulso y le da solidez a nuestra banda, asegurando que cada presentación sea potente y llena de
+                    energía.</p>
+            </div>
+            <div class="card">
+                <img src="img/Bombos.avif" alt="Bombo">
+                <h3>Bombo</h3>
+                <p>En nuestra Banda latina "Francisco Miranda, el bombo se destaca por ser el latido que mueve a
+                    todos. Cada golpe retumba con fuerza, marcando el ritmo y dando ese empuje que hace que nadie pueda
+                    quedarse quieto. Es el motor de nuestra música, el que mantiene la energía en alto y hace que cada
+                    presentación se sienta vibrante y llena de vida.</p>
+            </div>
+            <div class="card">
+                <img src="img/Saxofon alto.avif" alt="Saxofón Alto">
+                <h3>Saxofón Alto</h3>
+                <p>En nuestra Banda latina "Francisco Miranda", el saxofón alto se destaca por su sonido versátil y
+                    expresivo. Con sus melodías claras y llenas de sentimiento, aporta frescura y dinamismo, logrando
+                    que cada presentación tenga un brillo especial.</p>
+            </div>
+            <div class="card">
+                <img src="img/saxofon soprano.png" alt="Saxofón Soprano">
+                <h3>Saxofón Soprano</h3>
+                <p>El saxofón soprano en nuestra Banda es pura elegancia y estilo. Con su tono agudo y delicado, se roba
+                    las miradas al darle un aire sofisticado a nuestras interpretaciones, haciendo que la música fluya
+                    con suavidad y distinción.</p>
+            </div>
+            <div class="card">
+                <img src="img/Saxofon tenor.png" alt="Saxofón Tenor">
+                <h3>Saxofon Tenor</h3>
+                <p>El saxofón tenor se destaca por su fuerza y calidez, dándole ese toque profundo y apasionado a
+                    nuestro sonido. Es el encargado de envolver al público con su potencia, logrando un balance perfecto
+                    entre energía y emoción.</p>
+            </div>
+            <div class="card">
+                <img src="img/Flauta traversa.jpg" alt="Flauta Traversa">
+                <h3>Flauta Traversa</h3>
+                <p>En nuestra Banda latina "Francisco Miranda", la flauta traversa se destaca por su sonido dulce y
+                    ligero, que le da un toque mágico a cada interpretación. Sus melodías suaves llenan de elegancia y
+                    frescura nuestras presentaciones, creando momentos que envuelven al público con armonía y encanto.
+            </div>
+            <div class="card">
+                <img src="img/Congas.webp" alt="Congas">
+                <h3>Congas</h3>
+                <p>En nuestra banda latina "Francisco Miranda", las congas se destacan por darle ese sabor único que
+                    hace vibrar a todos. Sus ritmos llenos de fuerza y alegría son los que prenden el ambiente y hacen
+                    imposible quedarse quieto. Son el alma rítmica que conecta nuestra música con la esencia latina y
+                    convierte cada presentación en una verdadera fiesta.
+            </div>
+            <div class="card">
+                <img src="img/Timbales.jpg" alt="Timbales">
+                <h3>Timbales</h3>
+                <p>En nuestra Banda latina "Francisco Miranda", los timbales se destacan por encender la chispa de cada
+                    presentación. Con sus redobles rápidos y su sonido vibrante, le dan ese toque explosivo y festivo
+                    que levanta al público de principio a fin. Son el sello de energía y sabor que hace que nuestra
+                    música brille con toda la fuerza latina.
 
-            <!-- Imagen 3 -->
-            <img src="img/bandacompe3.jpg"Celebración tras la presentación" class="news-image" />
-
-            <p>La participación en la Championship 2025 marca un hito importante en la historia cultural del instituto,
-                y motiva a más estudiantes a unirse a la banda para los próximos años. El talento demostrado fortalece
-                el compromiso del centro educativo con una formación integral que incluye no solo lo académico, sino
-                también la expresión artística.</p>
-
-            <p>El Instituto Técnico Francisco Miranda reafirma su visión de fomentar espacios donde los jóvenes puedan
-                descubrir y potenciar sus talentos, construyendo así una comunidad estudiantil activa, creativa y
-                orgullosa de su identidad.</p>
+                </p>
+            </div>
+            <div class="card">
+                <img src="img/cencerro.webp" alt="Cencerro">
+                <h3>Cencerro</h3>
+                <p>En nuestra Banda latina "Francisco Miranda", el cencerro se destaca por agregar ese toque brillante
+                    y contagioso que completa nuestro ritmo. Cada golpe suena como un guiño alegre, marcando momentos
+                    clave y sumando sabor a nuestra música. Es ese detalle que, aunque pequeño, hace que nuestras
+                    presentaciones sean inolvidables y llenas de vida.
+            </div>
+            <div class="card">
+                <img src="img/Multitenor.png" alt="Multitenor">
+                <h3>Multitenor</h3>
+                <p>En nuestra Banda latina "Francisco Miranda", el multitenor se destaca por su potencia y
+                    versatilidad. Sus notas resonantes y su energía inigualable aportan fuerza y dinamismo a cada
+                    interpretación, convirtiéndolo en un elemento clave para mantener el ritmo y la emoción en alto. Es
+                    el instrumento que, junto con la percusión, hace que nuestro sonido sea vibrante y contagioso.
+            </div>
+            <div class="card">
+                <img src="img/CAJA SECA.png" alt="Caja Seca ">
+                <h3>Caja Seca</h3>
+                <p>En nuestra banda latina de Francisco Miranda, la caja seca se destaca por darle precisión y fuerza a
+                    nuestro ritmo. Cada golpe nítido marca los momentos clave de la música, manteniendo la energía y el
+                    pulso de la banda. Es el corazón de nuestra percusión, asegurando que cada presentación sea
+                    contundente, dinámica y llena de sabor.
+            </div>
+            <div class="card">
+                <img src="img/Platillos.jpg" alt="Platillos">
+                <h3>Platillos</h3>
+                <p>En nuestra banda latina de Francisco Miranda, los platillos se destacan por agregar ese toque
+                    brillante y espectacular a cada interpretación. Cada choque resuena con fuerza, marcando momentos de
+                    impacto y elevando la energía de la banda al máximo. Son el detalle que convierte nuestras
+                    presentaciones en experiencias llenas de ritmo, emoción y espectáculo.
+            </div>
+            <div class="card">
+                <img src="img/Guiro.webp" alt="Guiro">
+                <h3>Guiro</h3>
+                <p>En nuestra banda latina de Francisco Miranda, el güiro se destaca por darle ese sabor rítmico y
+                    auténtico que caracteriza nuestra música. Con sus sonidos rasgados y contagiosos, aporta movimiento
+                    y alegría, haciendo que cada tema tenga ese toque latino que invita a bailar. Es el pequeño detalle
+                    que hace grande nuestra energía en cada presentación.
+                </p>
+            </div>
         </div>
+    </div>
+
+    <!-- Sección video -->
+    <div class="container video-section">
+        <h2>📽 Presentación de la Banda</h2>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video de la Banda" frameborder="0"
+            allowfullscreen></iframe>
+    </div>
+
+    <!-- Sección requisitos -->
+    <div class="container requisitos">
+        <h2>✅ Requisitos para Unirse a la Banda</h2>
+        <ul>
+            <li>Ser estudiante activo del Instituto Técnico Francisco Miranda.</li>
+            <li>Tener compromiso con los ensayos semanales y presentaciones.</li>
+            <li>Poseer interés en la música y disposición para aprender.</li>
+            <li>Respetar a los compañeros y seguir las indicaciones del instructor.</li>
+            <li>Aprobar una audición básica de ingreso (ritmo, afinación o técnica).</li>
+            <li>Contar con autorización de los padres o tutores (para menores de edad).</li>
+        </ul>
     </div>
 
     <!-- Redes sociales flotantes -->
