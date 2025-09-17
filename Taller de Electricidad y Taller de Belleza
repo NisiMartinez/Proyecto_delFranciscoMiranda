@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taller de Belleza - Instituto Técnico Francisco Miranda</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Encabezado */
+    header {
+      background-color: #2a3e51; /* azul grisáceo */
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo img {
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid #b0c4de; /* borde azul claro */
+    }
+
+    nav a {
+      color: #f0f8ff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #b0c4de;
+    }
+
+    /* Contenido */
+    .content {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .content img {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .content h2 {
+      font-size: 22px;
+      margin-top: 20px;
+      color: #2a3e51;
+      border-left: 6px solid #b0c4de;
+      padding-left: 10px;
+    }
+
+    .content p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    /* Docentes (lista histórica) */
+    .docentes {
+      background: #f5faff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      border: 2px solid #2a3e51;
+    }
+
+    .docentes ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    .docentes li {
+      margin-bottom: 8px;
+    }
+
+    /* Sección docentes actuales (tarjetas) */
+    .maestros {
+      margin-top: 40px;
+    }
+
+    .maestros h2 {
+      color: #2a3e51;
+      margin-bottom: 20px;
+    }
+
+    .maestros-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .maestro-card {
+      background: #f5faff;
+      border: 2px solid #2a3e51;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .maestro-card img {
+      width: 100%;
+      max-width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      border: 3px solid #b0c4de;
+    }
+
+    .maestro-card h3 {
+      margin: 10px 0 5px;
+      color: #2a3e51;
+    }
+
+    .maestro-card p {
+      font-size: 14px;
+      color: #444;
+    }
+
+    /* Galería */
+    .galeria {
+      margin-top: 30px;
+    }
+
+    .galeria h2 {
+      margin-bottom: 15px;
+    }
+
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 3px solid #b0c4de;
+    }
+
+    /* Nueva sección: Trabajos */
+    .trabajos {
+      margin-top: 40px;
+    }
+
+    .trabajos h2 {
+      color: #2a3e51;
+      margin-bottom: 20px;
+    }
+
+    .trabajos-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .trabajo-card {
+      background: #f5faff;
+      border: 2px solid #2a3e51;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .trabajo-card img {
+      width: 100%;
+      max-width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      border: 3px solid #b0c4de;
+    }
+
+    .trabajo-card h3 {
+      color: #2a3e51;
+      margin-bottom: 10px;
+    }
+
+    /* Pie */
+    footer {
+      background-color: #2a3e51;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #f0f8ff;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">
+      <img src="IMG/foto12.jfif" alt="Escudo del Instituto">
+      <nav>
+        <a href="inicio.html">INICIO</a>
+        <a href="instalaciones.html">INSTALACIONES</a>
+        <a href="personal.html">PERSONAL</a>
+        <a href="cursos.html">CURSOS</a>
+        <a href="talleres.html">TALLERES</a>
+        <a href="clases.html">CLASES</a>
+        <a href="banda.html">BANDA MUSICAL</a>
+        <a href="ubicacion.html">UBICACIÓN</a>
+        <a href="inscripcion.html">INSCRIPCIÓN</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="content">
+    <!-- Imagen principal -->
+    <img src="IMG/foto4.jfif" alt="Taller de Belleza|">
+
+    <!-- Historia -->
+    El Taller de Belleza del Instituto Técnico Francisco Miranda nació como respuesta a la necesidad de brindar a
+    los estudiantes una formación práctica y profesional en el área de la estética y el cuidado personal.
+    Desde su creación, este taller se ha convertido en un espacio donde los alumnos 
+    desarrollan habilidades técnicas en peluquería, maquillaje, manicure, pedicure, tratamientos capilares y cuidado de la piel.
+    </p>
+    <p>
+  Fue impulsado por la maestra <b>Francis Elizabeth Moncada</b>, quien estructuró el primer plan de estudios en técnicas de
+  <b>peluquería, manicure, pedicure y maquillaje</b>. 
+  Con el tiempo, se incorporaron nuevas metodologías como el uso de productos profesionales para el cuidado capilar, 
+  técnicas modernas de estilismo, tratamientos estéticos y capacitación en emprendimiento dentro del área de la belleza.
+</p>
+<p>
+  Actualmente, el <b>Taller de Belleza</b> se ha consolidado como uno de los más reconocidos en la región,
+  formando profesionales que aportan al sector de la <b>cosmetología y la estética</b> en Honduras.
+</p>
+    </p>
+
+    <!-- Docentes (históricos) -->
+    <div class="docentes">
+      <h2>Docente que ha formado parte del taller</h2>
+      <ul>
+        <li><b>Prof.Francis Elizabeth</b> 
+      </ul>
+    </div>
+
+    <!-- Enfoque actual -->
+    <h2>Enfoque Actual</h2>
+<p>
+  Además, el taller promueve la <b>creatividad</b>, la aplicación de <b>normas de higiene y bioseguridad</b>, 
+  y fomenta el espíritu <b>emprendedor</b>, permitiendo que los egresados tengan las competencias necesarias 
+  para trabajar en salones de belleza, spas o iniciar su propio negocio en la industria de la estética.
+</p>
+<ul>
+  <li>Cuidado del cabello: cortes, peinados y colorimetría.</li>
+  <li>Tratamientos faciales y cuidado de la piel.</li>
+  <li>Maquillaje social y profesional.</li>
+  <li>Manicure, pedicure y aplicación de uñas acrílicas o de gel.</li>
+  <li>Depilación y técnicas de estética corporal.</li>
+  <li>Normas de higiene, bioseguridad y atención al cliente.</li>
+  <li>Prácticas profesionales y proyectos comunitarios.</li>
+</ul>
+<p>
+  Los egresados del <b>Taller de Belleza</b> se desempeñan en salones de estética, spas, barberías, clínicas de belleza y centros especializados en cosmetología. 
+  Asimismo, muchos optan por emprender su propio negocio, ofreciendo servicios de cuidado personal y estética a nivel local, nacional e incluso internacional.
+</p>
+
+    <!-- Sección Docentes actuales (fichas con foto) -->
+    <div class="maestros">
+      <h2>Docentes Actuales</h2>
+      <div class="maestros-grid">
+        <div class="maestro-card">
+          <img src="IMG/foto de profe.jfif" alt="Foto del docente">
+          <h3>LIC.FRANCIS Elizabeth MONCADA</h3>
+          <p>DOCENTE EN EL ÁREA DE BELLEZA</p>
+        </div>
+        </div>
+    </div>
+
+    <!-- Galería -->
+    <div class="galeria">
+      <h2>Galería de Imágenes</h2>
+      <div class="galeria-grid">
+        <img src="IMG/6bea309c-f85f-4b34-b9f5-8089517ad4d0 (1).jfif" alt="Estudiantes trabajando la madera">
+        <img src="IMG/6bea309c-f85f-4b34-b9f5-8089517ad4d0 (1).jfif" alt="Construcción de muebles">
+        <img src="IMG/foto2.jfif" alt="Taller en acción">
+        <img src="IMG/foto3.jfif" alt="Estructuras de madera finalizadas">
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    2025 Instituto Técnico Francisco Miranda – Taller de Belleza
+  </footer>
+
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taller de  Electricidad - Instituto Técnico Francisco Miranda</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Encabezado */
+    header {
+      background-color: #2a3e51; /* azul grisáceo */
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo img {
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid #b0c4de; /* borde azul claro */
+    }
+
+    nav a {
+      color: #f0f8ff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #b0c4de;
+    }
+
+    /* Contenido */
+    .content {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .content img {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .content h2 {
+      font-size: 22px;
+      margin-top: 20px;
+      color: #2a3e51;
+      border-left: 6px solid #b0c4de;
+      padding-left: 10px;
+    }
+
+    .content p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    /* Docentes (lista histórica) */
+    .docentes {
+      background: #f5faff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      border: 2px solid #2a3e51;
+    }
+
+    .docentes ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    .docentes li {
+      margin-bottom: 8px;
+    }
+
+    /* Sección docentes actuales (tarjetas) */
+    .maestros {
+      margin-top: 40px;
+    }
+
+    .maestros h2 {
+      color: #2a3e51;
+      margin-bottom: 20px;
+    }
+
+    .maestros-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .maestro-card {
+      background: #f5faff;
+      border: 2px solid #2a3e51;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .maestro-card img {
+      width: 100%;
+      max-width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      border: 3px solid #b0c4de;
+    }
+
+    .maestro-card h3 {
+      margin: 10px 0 5px;
+      color: #2a3e51;
+    }
+
+    .maestro-card p {
+      font-size: 14px;
+      color: #444;
+    }
+
+    /* Galería */
+    .galeria {
+      margin-top: 30px;
+    }
+
+    .galeria h2 {
+      margin-bottom: 15px;
+    }
+
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 3px solid #b0c4de;
+    }
+
+    /* Nueva sección: Trabajos */
+    .trabajos {
+      margin-top: 40px;
+    }
+
+    .trabajos h2 {
+      color: #2a3e51;
+      margin-bottom: 20px;
+    }
+
+    .trabajos-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .trabajo-card {
+      background: #f5faff;
+      border: 2px solid #2a3e51;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .trabajo-card img {
+      width: 100%;
+      max-width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      border: 3px solid #b0c4de;
+    }
+
+    .trabajo-card h3 {
+      color: #2a3e51;
+      margin-bottom: 10px;
+    }
+
+    /* Pie */
+    footer {
+      background-color: #2a3e51;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #f0f8ff;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">
+      <img src="IMG/foto12.jfif" alt="Escudo del Instituto">
+      <nav>
+        <a href="inicio.html">INICIO</a>
+        <a href="instalaciones.html">INSTALACIONES</a>
+        <a href="personal.html">PERSONAL</a>
+        <a href="cursos.html">CURSOS</a>
+        <a href="talleres.html">TALLERES</a>
+        <a href="clases.html">CLASES</a>
+        <a href="banda.html">BANDA MUSICAL</a>
+        <a href="ubicacion.html">UBICACIÓN</a>
+        <a href="inscripcion.html">INSCRIPCIÓN</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="content">
+    <!-- Imagen principal -->
+    <img src="IMG/foto10.jfif" alt="Taller de Electricidad">
+
+    <!-- Historia -->
+    <h2>Historia del Taller</h2>
+<p>
+  El Taller de Electricidad del Instituto Técnico Francisco Miranda fue fundado en <b>1990</b> con el objetivo
+  de brindar formación técnica especializada en instalaciones eléctricas y mantenimiento de sistemas energéticos. 
+  Desde sus inicios, el taller ha sido un espacio donde los estudiantes desarrollan habilidades prácticas y teóricas 
+  que los preparan para el mundo laboral.
+</p>
+<p>
+  Fue impulsado por el maestro <b>Christian Medina y prof.Mario Avila </b>, quien estructuró el primer plan de estudios en electricidad 
+  básica, cableado residencial e industrial y normas de seguridad eléctrica. Con el tiempo, se incorporaron nuevas 
+  metodologías como el uso de equipos modernos, interpretación de planos eléctricos y prácticas en proyectos 
+  comunitarios.
+</p>
+<p>
+  Actualmente, el Taller de Electricidad se ha consolidado como uno de los más reconocidos en la región, 
+  formando profesionales que aportan al sector eléctrico, la construcción y el desarrollo tecnológico en Honduras.
+</p>
+
+
+    <!-- Docentes (históricos) -->
+    <div class="docentes">
+      <h2>Docente que ha formado parte del taller</h2>
+      <ul>
+        <li><b>Prof.Christian Medina</b> – prof.Mario Avila</li>
+      </ul>
+    </div>
+
+    <!-- Enfoque actual -->
+    <h2>Enfoque Actual</h2>
+<p>
+  El taller cuenta con herramientas y equipos modernos para realizar instalaciones eléctricas de forma segura y eficiente. El plan de
+  estudios incluye:
+</p>
+<ul>
+  <li>Electricidad básica y avanzada.</li>
+  <li>Instalación y mantenimiento de circuitos eléctricos.</li>
+  <li>Uso de herramientas y equipos eléctricos.</li>
+  <li>Interpretación de planos eléctricos.</li>
+  <li>Normas de seguridad eléctrica.</li>
+  <li>Proyectos comunitarios y prácticas de campo.</li>
+</ul>
+<p>
+  Los egresados del taller se desempeñan en empresas eléctricas, talleres de mantenimiento, proyectos de construcción y de manera independiente a nivel nacional e internacional.
+</p>
+
+    <!-- Sección Docentes actuales (fichas con foto) -->
+    <div class="maestros">
+      <h2>Docentes Actuales</h2>
+      <div class="maestros-grid">
+        <div class="maestro-card">
+          <img src="IMG/foto13.jfif" alt="Foto del docente">
+          <h3>LIC.CHRISTIAN OBED MEDINA</h3>
+          <p>DOCENTE EN EL ÁREA DE Electricidad</p>
+        </div>
+        <div class="maestro-card">
+          <img src="IMG/foto14.jfif" alt="Foto del docente">
+          <h3>LIC. MARIO LEONEL AVILA</h3>
+          <p>DOCENTE EN EL ÁREA DE Electricidad</p>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Galería -->
+    <div class="galeria">
+      <h2>Galería de Imágenes</h2>
+      <div class="galeria-grid">
+        <img src="IMG/foto7.jfif" alt="Estudiantes trabajando la madera">
+        <img src="IMG/foto8.jfif" alt="Construcción de muebles">
+        <img src="IMG/foto9.jfif" alt="Taller en acción">
+        <img src="IMG/foto10.jfif" alt="Estructuras de madera finalizadas">
+      </div>
+    </div>
+
+  <footer>
+    2025 Instituto Técnico Francisco Miranda – Taller de Electricidad
+  </footer>
+
+</body>
+
+</html>
